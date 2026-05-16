@@ -46,6 +46,7 @@ const demoLabel = document.querySelector("#demo-label");
 const demoTitle = document.querySelector("#demo-title");
 const demoCopy = document.querySelector("#demo-copy");
 const demoImage = document.querySelector("#demo-image");
+const demoFrame = document.querySelector(".demo-frame");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -61,7 +62,13 @@ tabs.forEach((tab) => {
     demoCopy.textContent = demo.copy;
     demoImage.src = demo.src;
     demoImage.alt = demo.alt;
+    demoFrame.classList.remove("is-switching");
+    window.requestAnimationFrame(() => demoFrame.classList.add("is-switching"));
   });
+});
+
+demoImage.addEventListener("animationend", () => {
+  demoFrame.classList.remove("is-switching");
 });
 
 const header = document.querySelector("[data-elevate]");
@@ -70,3 +77,26 @@ const setHeaderState = () => {
 };
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
+
+const animatedItems = document.querySelectorAll("[data-animate]");
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  animatedItems.forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+    revealObserver.observe(item);
+  });
+} else {
+  animatedItems.forEach((item) => item.classList.add("is-visible"));
+}

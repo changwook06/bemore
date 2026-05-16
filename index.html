@@ -138,10 +138,31 @@
               feedback, passport stamps, and social motivation.
             </p>
           </div>
-          <div class="mini-dashboard">
-            <div><strong>350</strong><span>credits active</span></div>
-            <div><strong>298,000₩</strong><span>shown as saved</span></div>
-            <div><strong>4w</strong><span>soft streak</span></div>
+          <div class="mini-dashboard" aria-label="Prototype telemetry">
+            <div class="mini-card wallet-card" data-animate>
+              <span class="metric-icon">₩</span>
+              <strong>350</strong>
+              <span>credits active</span>
+              <small>Universal balance across activities</small>
+            </div>
+            <div class="mini-card savings-card" data-animate>
+              <span class="metric-icon">↗</span>
+              <strong>298,000₩</strong>
+              <span>projected unused-spend recovery</span>
+              <small>Shows the value of flexible access</small>
+            </div>
+            <div class="mini-card streak-card" data-animate>
+              <span class="metric-icon">☆</span>
+              <strong>4w</strong>
+              <span>soft streak</span>
+              <small>Motivation without punishment</small>
+            </div>
+            <div class="mini-card wide-card" data-animate>
+              <span class="pulse-dot"></span>
+              <strong>AI + wallet + map + social</strong>
+              <span>one loop from intent to booking to habit formation</span>
+              <small>*Projected user-state example for the initial 2026 launch scenario.</small>
+            </div>
           </div>
         </div>
         <div class="media-tabs" role="tablist" aria-label="Prototype media">
@@ -181,14 +202,42 @@
               manual booking threads and fragmented admin work.
             </p>
           </div>
-          <div class="partner-flow" aria-label="Partner flow">
-            <div>Unused slot</div>
-            <span></span>
-            <div>BeMore routing</div>
-            <span></span>
-            <div>Booked class</div>
-            <span></span>
-            <div>Monthly payout</div>
+          <div class="partner-console" aria-label="Partner flow">
+            <div class="console-header">
+              <span></span>
+              <strong>Partner demand console</strong>
+              <small>Live capacity routing</small>
+            </div>
+            <div class="partner-flow">
+              <div class="flow-node node-empty">
+                <span>01</span>
+                <strong>Unused slot</strong>
+                <small>Tuesday 10:00 Pilates, 4 seats open</small>
+              </div>
+              <div class="flow-link"></div>
+              <div class="flow-node node-route">
+                <span>02</span>
+                <strong>BeMore routing</strong>
+                <small>Matches schedule, distance, mood, and credits</small>
+              </div>
+              <div class="flow-link"></div>
+              <div class="flow-node node-booked">
+                <span>03</span>
+                <strong>Booked class</strong>
+                <small>Instant confirmation and wallet settlement</small>
+              </div>
+              <div class="flow-link"></div>
+              <div class="flow-node node-payout">
+                <span>04</span>
+                <strong>Monthly payout</strong>
+                <small>Revenue, occupancy, and customer insights</small>
+              </div>
+            </div>
+            <div class="partner-stats">
+              <div><strong>Off-peak</strong><span>inventory surfaced</span></div>
+              <div><strong>Zero-risk</strong><span>demand generation</span></div>
+              <div><strong>Dashboard</strong><span>instead of chat threads</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -196,7 +245,7 @@
       <section class="validation-section">
         <div class="section-kicker">Built through research</div>
         <div class="validation-grid">
-          <article>
+          <article class="validation-copy">
             <h2>Direct feedback from both sides of the marketplace.</h2>
             <p>
               User testing, expert review, partner interviews, and survey data
@@ -204,18 +253,65 @@
               freedom mechanism, and business owners highlighted the need for
               schedule matching plus a dashboard.
             </p>
+            <div class="research-tags" aria-label="Research inputs">
+              <span>User testing</span>
+              <span>Partner interview</span>
+              <span>Expert review</span>
+              <span>Survey data</span>
+            </div>
           </article>
-          <article class="score-card">
+          <article class="score-card score-coral" data-animate>
+            <small>User validation</small>
             <strong>5.0 / 5</strong>
             <span>Real-life use intent</span>
+            <div class="score-bar"><i style="--fill: 100%"></i></div>
           </article>
-          <article class="score-card">
+          <article class="score-card score-blue" data-animate>
+            <small>Wallet validation</small>
             <strong>5.0 / 5</strong>
             <span>Credit system usefulness</span>
+            <div class="score-bar"><i style="--fill: 100%"></i></div>
           </article>
-          <article class="score-card">
+          <article class="score-card score-mint" data-animate>
+            <small>Discovery validation</small>
             <strong>5.0 / 5</strong>
             <span>Map and location usefulness</span>
+            <div class="score-bar"><i style="--fill: 100%"></i></div>
+          </article>
+          <article class="evidence-panel">
+            <h3>What the evidence says</h3>
+            <div class="evidence-row">
+              <span>Would pay for the service</span>
+              <strong>5.0</strong>
+              <i style="--fill: 100%"></i>
+            </div>
+            <div class="evidence-row">
+              <span>Booking process clarity</span>
+              <strong>5.0</strong>
+              <i style="--fill: 100%"></i>
+            </div>
+            <div class="evidence-row">
+              <span>AI recommendations usefulness</span>
+              <strong>4.5</strong>
+              <i style="--fill: 90%"></i>
+            </div>
+            <div class="evidence-row">
+              <span>Social feature appeal</span>
+              <strong>4.5</strong>
+              <i style="--fill: 90%"></i>
+            </div>
+          </article>
+          <article class="research-stat">
+            <strong>100%</strong>
+            <span>of interviewees said they would use BeMore in real life</span>
+          </article>
+          <article class="research-stat">
+            <strong>95.6%</strong>
+            <span>of cited fitness consumer damage claims involved contract disputes</span>
+          </article>
+          <article class="research-stat">
+            <strong>17%</strong>
+            <span>retention lift cited for social network features in mobile health</span>
           </article>
         </div>
       </section>
